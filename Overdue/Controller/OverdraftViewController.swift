@@ -15,6 +15,7 @@ class OverdraftViewController: UIViewController {
     @IBOutlet weak var overdraftAlertTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        overdraftAlertTableView.reloadData()
         // Do any additional setup after loading the view.
     }
 
@@ -33,12 +34,14 @@ extension OverdraftViewController: UITableViewDelegate, UITableViewDataSource {
     }
 
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.row == 1 {
+        if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "alertSwitch", for: indexPath) as! AlertSwitchTableViewCell
+            print("Cell 0")
             return cell
         }
         else {
-          let cell =   tableView.dequeueReusableCell(withIdentifier: "requestIncrease", for: indexPath) as! UITableViewCell
+            let cell =   tableView.dequeueReusableCell(withIdentifier: "requestIncrease", for: indexPath)
+            print("Cell 1")
             return cell
         }
 
