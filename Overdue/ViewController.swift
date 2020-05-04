@@ -8,8 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class OverdraftViewController: UIViewController {
 
+    @IBOutlet weak var progressBarView: UIView!
+    @IBOutlet weak var interestDisplayView: UIView!
+    @IBOutlet weak var overdraftAlertTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
