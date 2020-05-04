@@ -17,15 +17,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Override point for customization after application launch.
 
         let launcedBefore = UserDefaults.standard.bool(forKey: "hasLaunchedBefore")
-        if launcedBefore {
+        if !launcedBefore {
             UserDefaults.standard.set(100.00, forKey: "overdraftMoney")
-            
-        }
-        else
-        {
-            UserDefaults.standard.set(true,forKey: "hasLaunchedBefore")
-            UserDefaults.standard.set(100.00, forKey: "overdraftMoney")
-            print("First time")
+            UserDefaults.standard.set(true, forKey: "hasLaunchedBefore")
         }
         return true
     }

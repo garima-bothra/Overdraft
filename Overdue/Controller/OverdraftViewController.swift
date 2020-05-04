@@ -28,30 +28,38 @@ class OverdraftViewController: UIViewController {
         setupLabelView()
         updateTimer()
     }
+
+    //Function to set navigation bar items
     func setupNavBar() {
         navigationController?.navigationBar.topItem?.title = "OVERDRAFT"
         navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "<", style: .plain, target: self, action: nil)
     }
 
+    //Setup the progress bar
     func setupProgressBar () {
         let trackLayer = CAShapeLayer()
         let limitLayer = CAShapeLayer()
+        //Find centre to add progress bar
         var midY = progressBarView.frame.size.width/2 + 10
         var midX = progressBarView.frame.size.height/2
         var center: CGPoint { return CGPoint(x: midX, y: midY) }
+        //Add circular path
         let circularPath = UIBezierPath(arcCenter: center, radius: midY * 0.8, startAngle: -(5 * CGFloat.pi/4),
                                         endAngle: CGFloat.pi/4, clockwise: true)
+        //Set tracklayer to indicate complete = 2000
         trackLayer.path = circularPath.cgPath
         trackLayer.strokeColor = UIColor.lightGray.cgColor
         trackLayer.lineWidth = 40
         trackLayer.lineCap = .round
         trackLayer.fillColor = UIColor.clear.cgColor
+        //Set tracklayer to indicate limit = 1000
         limitLayer.path = circularPath.cgPath
         limitLayer.strokeColor = UIColor.white.cgColor
         limitLayer.lineWidth = 40
         limitLayer.strokeEnd = 0.5
         limitLayer.lineCap = .round
         limitLayer.fillColor = UIColor.clear.cgColor
+        //Setup shapeLayer for progress bar
         shapeLayer.path = circularPath.cgPath
         shapeLayer.strokeColor = UIColor.systemTeal.cgColor
         shapeLayer.lineWidth = 40
@@ -64,7 +72,7 @@ class OverdraftViewController: UIViewController {
         progressBarView.layer.addSublayer(shapeLayer)
 
     }
-
+    //Setup all labels in the view
     func setupLabelView() {
         let lineLayer = CAShapeLayer()
         let linePath = UIBezierPath()
@@ -82,7 +90,7 @@ class OverdraftViewController: UIViewController {
 
 }
 
- // MARK: - Table view data source
+ // MARK: - Table view data source methods
 extension OverdraftViewController: UITableViewDelegate, UITableViewDataSource {
 
      func numberOfSections(in tableView: UITableView) -> Int {
@@ -112,8 +120,9 @@ extension OverdraftViewController: UITableViewDelegate, UITableViewDataSource {
 }
 
 extension OverdraftViewController {
+    //Function to indicate increase in overdraft with time
     func updateTimer() {
-        eventsTimer = Timer.scheduledTimer(withTimeInterval: 5, repeats: true) { (timer) in
+        eventsTimer = Timer.scheduledTimer(withTimeInterval: 360, repeats: true) { (timer) in
             let randomOverdraft = Double.random(in: 0 ..< 200)
             let overdraft = UserDefaults.standard.double(forKey: "overdraftMoney")
             let overlay = randomOverdraft + overdraft
@@ -123,7 +132,7 @@ extension OverdraftViewController {
             let stringInterest = String(format: "%.2f", simpleInterest)
             self.interestLabel.text = stringInterest + "€"
             self.overdraftLabel.text = String(format: "%.2f", overlay) + "€"
-
+            //Present alertViewControllers according to given conditions
             if(overdraft < 1000) && overlay > 1000 && self.alertViewAllowed{
                 let alert = UIAlertController(title: "Overdraft Limit Exceeded", message: "Your overdraft amount has exceeded the set limit of 1000€", preferredStyle: UIAlertController.Style.alert)
                 alert.addAction(UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil))
