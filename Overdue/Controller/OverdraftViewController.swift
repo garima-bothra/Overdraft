@@ -36,10 +36,10 @@ class OverdraftViewController: UIViewController {
     func setupProgressBar () {
         let trackLayer = CAShapeLayer()
         let limitLayer = CAShapeLayer()
-        var midY = progressBarView.frame.size.width/2
+        var midY = progressBarView.frame.size.width/2 + 10
         var midX = progressBarView.frame.size.height/2
         var center: CGPoint { return CGPoint(x: midX, y: midY) }
-        let circularPath = UIBezierPath(arcCenter: center, radius: midY - 45, startAngle: -(5 * CGFloat.pi/4),
+        let circularPath = UIBezierPath(arcCenter: center, radius: midY * 0.8, startAngle: -(5 * CGFloat.pi/4),
                                         endAngle: CGFloat.pi/4, clockwise: true)
         trackLayer.path = circularPath.cgPath
         trackLayer.strokeColor = UIColor.lightGray.cgColor

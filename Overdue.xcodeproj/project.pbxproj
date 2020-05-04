@@ -14,6 +14,7 @@
 		863988E1246043E100395509 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 863988E0246043E100395509 /* Assets.xcassets */; };
 		863988E4246043E100395509 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 863988E2246043E100395509 /* LaunchScreen.storyboard */; };
 		863988EC246056F000395509 /* AlertSwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863988EB246056F000395509 /* AlertSwitchTableViewCell.swift */; };
+		869191E22460DC5F00C24C64 /* OverdraftsTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 869191E12460DC5F00C24C64 /* OverdraftsTabViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		863988E3246043E100395509 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		863988E5246043E100395509 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		863988EB246056F000395509 /* AlertSwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertSwitchTableViewCell.swift; sourceTree = "<group>"; };
+		869191E12460DC5F00C24C64 /* OverdraftsTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverdraftsTabViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +74,7 @@
 			isa = PBXGroup;
 			children = (
 				863988DB246043DF00395509 /* OverdraftViewController.swift */,
+				869191E12460DC5F00C24C64 /* OverdraftsTabViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -157,6 +160,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				869191E22460DC5F00C24C64 /* OverdraftsTabViewController.swift in Sources */,
 				863988DC246043DF00395509 /* OverdraftViewController.swift in Sources */,
 				863988D8246043DF00395509 /* AppDelegate.swift in Sources */,
 				863988EC246056F000395509 /* AlertSwitchTableViewCell.swift in Sources */,
