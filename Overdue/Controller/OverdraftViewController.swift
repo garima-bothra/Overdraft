@@ -44,7 +44,7 @@ class OverdraftViewController: UIViewController {
         trackLayer.path = circularPath.cgPath
         trackLayer.strokeColor = UIColor.lightGray.cgColor
         trackLayer.lineWidth = 40
-        trackLayer.lineCap = .square
+        trackLayer.lineCap = .round
         trackLayer.fillColor = UIColor.clear.cgColor
         limitLayer.path = circularPath.cgPath
         limitLayer.strokeColor = UIColor.white.cgColor
@@ -120,8 +120,9 @@ extension OverdraftViewController {
             UserDefaults.standard.set(overlay, forKey: "overdraftMoney")
             self.shapeLayer.strokeEnd = CGFloat(overlay/2000)
             let simpleInterest = (8.9 * Double(overlay) * 0.25)/100
-            self.interestLabel.text = "\(simpleInterest)€"
-            self.overdraftLabel.text = "\(overlay)€"
+            let stringInterest = String(format: "%.2f", simpleInterest)
+            self.interestLabel.text = stringInterest + "€"
+            self.overdraftLabel.text = String(format: "%.2f", overlay) + "€"
 
             if(overdraft < 1000) && overlay > 1000 && self.alertViewAllowed{
                 let alert = UIAlertController(title: "Overdraft Limit Exceeded", message: "Your overdraft amount has exceeded the set limit of 1000€", preferredStyle: UIAlertController.Style.alert)
