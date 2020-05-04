@@ -10,6 +10,9 @@ import UIKit
 
 class OverdraftViewController: UIViewController {
 
+    //Creating variables
+    var alertViewAllowed : Bool = true
+    //Creating outlets
     @IBOutlet weak var progressBarView: UIView!
     @IBOutlet weak var interestDisplayView: UIView!
     @IBOutlet weak var overdraftAlertTableView: UITableView!
@@ -36,7 +39,7 @@ extension OverdraftViewController: UITableViewDelegate, UITableViewDataSource {
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "alertSwitch", for: indexPath) as! AlertSwitchTableViewCell
-            print("Cell 0")
+            cell.parentController = self
             return cell
         }
         else {

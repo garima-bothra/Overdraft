@@ -10,6 +10,7 @@ import UIKit
 
 class AlertSwitchTableViewCell: UITableViewCell {
 
+    weak var parentController : OverdraftViewController?
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,4 +22,7 @@ class AlertSwitchTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    @IBAction func checkSwitchState(_ sender: UISwitch) {
+        parentController?.alertViewAllowed = sender.isOn
+    }
 }
