@@ -214,13 +214,18 @@
         <!--Tab Bar Controller-->
         <scene sceneID="G8A-Hc-RsK">
             <objects>
-                <tabBarController id="nkr-Vv-G14" sceneMemberID="viewController">
+                <tabBarController modalPresentationStyle="fullScreen" id="nkr-Vv-G14" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="4Pp-rK-5zI"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iVY-wu-c8n">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath=".selectedIndex">
+                            <integer key="value" value="4"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
                     <connections>
                         <segue destination="GE9-hC-OcV" kind="relationship" relationship="viewControllers" id="dX0-Ez-5ph"/>
                         <segue destination="xni-SH-rEq" kind="relationship" relationship="viewControllers" id="wg7-Af-0rU"/>

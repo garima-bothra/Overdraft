@@ -21,9 +21,6 @@ class OverdraftViewController: UIViewController {
         super.viewDidLoad()
         setupNavBar()
         setupProgressBar()
-       // handleAnimation()
-       // overdraftAlertTableView.reloadData()
-        // Do any additional setup after loading the view.
     }
     func setupNavBar() {
         navigationController?.navigationBar.topItem?.title = "OVERDRAFT"
@@ -31,12 +28,6 @@ class OverdraftViewController: UIViewController {
     }
 
     func setupProgressBar () {
-
-//        let progressRing = UICircularRing()
-//        progressRing.startAngle = 180.0
-//        progressRing.endAngle = 270.0
-//        progressRing.style = .bordered(width: progressBarView.frame.size.width, color: .blue)
-//        progressBarView.addSubview(progressRing)
         let trackLayer = CAShapeLayer()
         let limitLayer = CAShapeLayer()
         var midY = progressBarView.frame.size.width/2

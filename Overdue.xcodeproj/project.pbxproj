@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -14,11 +14,9 @@
 		863988E1246043E100395509 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 863988E0246043E100395509 /* Assets.xcassets */; };
 		863988E4246043E100395509 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 863988E2246043E100395509 /* LaunchScreen.storyboard */; };
 		863988EC246056F000395509 /* AlertSwitchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 863988EB246056F000395509 /* AlertSwitchTableViewCell.swift */; };
-		9EFE3EABA932D66D2D4822C0 /* Pods_Overdue.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65471DBE8DBD54B93CE7C441 /* Pods_Overdue.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		65471DBE8DBD54B93CE7C441 /* Pods_Overdue.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Overdue.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		863988D4246043DF00395509 /* Overdue.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Overdue.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		863988D7246043DF00395509 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		863988D9246043DF00395509 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -28,8 +26,6 @@
 		863988E3246043E100395509 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		863988E5246043E100395509 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		863988EB246056F000395509 /* AlertSwitchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertSwitchTableViewCell.swift; sourceTree = "<group>"; };
-		CC2DC95C5683F4AE1FA10423 /* Pods-Overdue.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Overdue.release.xcconfig"; path = "Target Support Files/Pods-Overdue/Pods-Overdue.release.xcconfig"; sourceTree = "<group>"; };
-		D318A348F6C59CB863ECD1D8 /* Pods-Overdue.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Overdue.debug.xcconfig"; path = "Target Support Files/Pods-Overdue/Pods-Overdue.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,38 +33,17 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9EFE3EABA932D66D2D4822C0 /* Pods_Overdue.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		40E6E6DBDC007BDBDDAED30C /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				D318A348F6C59CB863ECD1D8 /* Pods-Overdue.debug.xcconfig */,
-				CC2DC95C5683F4AE1FA10423 /* Pods-Overdue.release.xcconfig */,
-			);
-			name = Pods;
-			path = Pods;
-			sourceTree = "<group>";
-		};
-		7998F02B1BD6F0B958A02DA0 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				65471DBE8DBD54B93CE7C441 /* Pods_Overdue.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		863988CB246043DF00395509 = {
 			isa = PBXGroup;
 			children = (
 				863988D6246043DF00395509 /* Overdue */,
 				863988D5246043DF00395509 /* Products */,
-				40E6E6DBDC007BDBDDAED30C /* Pods */,
-				7998F02B1BD6F0B958A02DA0 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -118,11 +93,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 863988E8246043E100395509 /* Build configuration list for PBXNativeTarget "Overdue" */;
 			buildPhases = (
-				27FD4B0C7CA2DE51C103F9A2 /* [CP] Check Pods Manifest.lock */,
 				863988D0246043DF00395509 /* Sources */,
 				863988D1246043DF00395509 /* Frameworks */,
 				863988D2246043DF00395509 /* Resources */,
-				C9EFD3C48C819FF73B090A2C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -178,48 +151,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		27FD4B0C7CA2DE51C103F9A2 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-			);
-			inputPaths = (
-				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
-				"${PODS_ROOT}/Manifest.lock",
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputFileListPaths = (
-			);
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Overdue-checkManifestLockResult.txt",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		C9EFD3C48C819FF73B090A2C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Overdue/Pods-Overdue-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Overdue/Pods-Overdue-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Overdue/Pods-Overdue-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		863988D0246043DF00395509 /* Sources */ = {
@@ -371,7 +302,6 @@
 		};
 		863988E9246043E100395509 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D318A348F6C59CB863ECD1D8 /* Pods-Overdue.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -390,7 +320,6 @@
 		};
 		863988EA246043E100395509 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CC2DC95C5683F4AE1FA10423 /* Pods-Overdue.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
