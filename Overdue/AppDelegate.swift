@@ -15,6 +15,20 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+
+        let launcedBefore = UserDefaults.standard.bool(forKey: "hasLaunchedBefore")
+        if launcedBefore {
+            let unix = UserDefaults.standard.integer(forKey: "firstUnixTime")
+            let overboard = UserDefaults.standard.integer(forKey: "overboardMoney")
+            print("Launched before. Overboard: \(overboard)")
+            
+        }
+        else
+        {
+            UserDefaults.standard.set(true,forKey: "hasLaunchedBefore")
+            UserDefaults.standard.set(100, forKey: "overboardMoney")
+            print("First time")
+        }
         return true
     }
 

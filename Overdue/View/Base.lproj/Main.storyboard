@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="nkr-Vv-G14">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="cGz-ys-gwU">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
@@ -16,39 +16,37 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Klz-vY-yWe">
-                                <rect key="frame" x="20" y="44" width="335" height="333.5"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Progress View" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qbB-WJ-HIs">
-                                        <rect key="frame" x="112" y="156" width="110" height="21"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
+                                <rect key="frame" x="20" y="88" width="335" height="333.5"/>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BWO-z4-dfe">
-                                <rect key="frame" x="0.0" y="387.5" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="431.5" width="375" height="60"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Interest incurred this quater" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RaA-pb-7xo">
-                                        <rect key="frame" x="38" y="8" width="213" height="21"/>
+                                        <rect key="frame" x="38" y="12" width="184" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="NotoSansKannada-Regular" family="Noto Sans Kannada" pointSize="15"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Effective annual interest rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fu8-BQ-s9Q">
-                                        <rect key="frame" x="38" y="39" width="219" height="21"/>
+                                        <rect key="frame" x="38" y="39" width="153" height="17"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
+                                        <fontDescription key="fontDescription" name="NotoSansKannada-Regular" family="Noto Sans Kannada" pointSize="12"/>
+                                        <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="-3.79€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xHp-U2-kIx">
+                                        <rect key="frame" x="272" y="0.0" width="66" height="60"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <fontDescription key="fontDescription" name="NotoSansKannada-Regular" family="Noto Sans Kannada" pointSize="20"/>
+                                        <color key="textColor" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UYU-fe-uJy">
-                                <rect key="frame" x="0.0" y="482.5" width="375" height="135.5"/>
+                                <rect key="frame" x="0.0" y="511.5" width="375" height="106.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="alertSwitch" rowHeight="50" id="hpM-FY-hVa" customClass="AlertSwitchTableViewCell" customModule="Overdue" customModuleProvider="target">
@@ -61,13 +59,14 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Overdraft alert" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bgz-i7-ezv">
                                                     <rect key="frame" x="15" y="11" width="178" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="NotoSansKannada-Regular" family="Noto Sans Kannada" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="AxR-7Z-Kuy">
                                                     <rect key="frame" x="298" y="6" width="49" height="31"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="onTintColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     <connections>
                                                         <action selector="checkSwitchState:" destination="hpM-FY-hVa" eventType="valueChanged" id="b3r-hw-OmB"/>
                                                     </connections>
@@ -85,7 +84,7 @@
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Request increase" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RR7-lS-X39">
                                                     <rect key="frame" x="15" y="11" width="153" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="NotoSansKannada-Regular" family="Noto Sans Kannada" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -99,17 +98,18 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="0.97668810150950092" green="0.97668810150950092" blue="0.97668810150950092" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <constraints>
                             <constraint firstItem="UYU-fe-uJy" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="6Lh-lf-nao"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Klz-vY-yWe" secondAttribute="trailing" constant="20" id="AE0-UA-Arr"/>
                             <constraint firstItem="UYU-fe-uJy" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="AcW-o3-qdf"/>
+                            <constraint firstItem="Klz-vY-yWe" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Ew3-Mt-WwP"/>
                             <constraint firstItem="Klz-vY-yWe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="HI4-vf-dje"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="UYU-fe-uJy" secondAttribute="bottom" id="Jzv-sN-pvp"/>
                             <constraint firstItem="BWO-z4-dfe" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="Kb0-4e-CEV"/>
                             <constraint firstItem="BWO-z4-dfe" firstAttribute="top" secondItem="Klz-vY-yWe" secondAttribute="bottom" constant="10" id="QoE-HI-yBH"/>
                             <constraint firstItem="BWO-z4-dfe" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.089955" id="WMm-hQ-sr0"/>
-                            <constraint firstItem="UYU-fe-uJy" firstAttribute="top" secondItem="BWO-z4-dfe" secondAttribute="bottom" constant="35" id="Yue-La-41v"/>
+                            <constraint firstItem="UYU-fe-uJy" firstAttribute="top" secondItem="BWO-z4-dfe" secondAttribute="bottom" constant="20" id="Yue-La-41v"/>
                             <constraint firstItem="Klz-vY-yWe" firstAttribute="height" secondItem="8bC-Xf-vdC" secondAttribute="height" multiplier="0.5" id="aeQ-E6-HFp"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BWO-z4-dfe" secondAttribute="trailing" id="mT3-rp-fNL"/>
                             <constraint firstItem="Klz-vY-yWe" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="44" id="mV1-47-icf"/>
@@ -191,10 +191,31 @@
             </objects>
             <point key="canvasLocation" x="1685" y="822"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Ccp-Fo-kOh">
+            <objects>
+                <navigationController id="cGz-ys-gwU" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VMK-sl-K0T">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="nkr-Vv-G14" kind="relationship" relationship="rootViewController" id="RjN-t8-bIk"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0nf-Py-Zf7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-441" y="-1"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="G8A-Hc-RsK">
             <objects>
                 <tabBarController id="nkr-Vv-G14" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="4Pp-rK-5zI"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="iVY-wu-c8n">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
                         <autoresizingMask key="autoresizingMask"/>

@@ -12,16 +12,60 @@ class OverdraftViewController: UIViewController {
 
     //Creating variables
     var alertViewAllowed : Bool = true
+    let shapeLayer = CAShapeLayer()
     //Creating outlets
     @IBOutlet weak var progressBarView: UIView!
     @IBOutlet weak var interestDisplayView: UIView!
     @IBOutlet weak var overdraftAlertTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        overdraftAlertTableView.reloadData()
+        setupNavBar()
+        setupProgressBar()
+       // handleAnimation()
+       // overdraftAlertTableView.reloadData()
         // Do any additional setup after loading the view.
     }
+    func setupNavBar() {
+        navigationController?.navigationBar.topItem?.title = "OVERDRAFT"
+        navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "<", style: .plain, target: self, action: nil)
+    }
 
+    func setupProgressBar () {
+
+//        let progressRing = UICircularRing()
+//        progressRing.startAngle = 180.0
+//        progressRing.endAngle = 270.0
+//        progressRing.style = .bordered(width: progressBarView.frame.size.width, color: .blue)
+//        progressBarView.addSubview(progressRing)
+        let trackLayer = CAShapeLayer()
+        let limitLayer = CAShapeLayer()
+        var midY = progressBarView.frame.size.width/2
+        var midX = progressBarView.frame.size.height/2
+        var center: CGPoint { return CGPoint(x: midX, y: midY) }
+        let circularPath = UIBezierPath(arcCenter: center, radius: midY - 45, startAngle: -(5 * CGFloat.pi/4),
+                                        endAngle: CGFloat.pi/4, clockwise: true)
+        trackLayer.path = circularPath.cgPath
+        trackLayer.strokeColor = UIColor.lightGray.cgColor
+        trackLayer.lineWidth = 35
+        trackLayer.lineCap = .square
+        trackLayer.fillColor = UIColor.clear.cgColor
+        limitLayer.path = circularPath.cgPath
+        limitLayer.strokeColor = UIColor.white.cgColor
+        limitLayer.lineWidth = 35
+        limitLayer.strokeEnd = 0.5
+        limitLayer.lineCap = .round
+        limitLayer.fillColor = UIColor.clear.cgColor
+        shapeLayer.path = circularPath.cgPath
+        shapeLayer.strokeColor = UIColor.systemTeal.cgColor
+        shapeLayer.lineWidth = 35
+        shapeLayer.strokeEnd = 0.25
+        shapeLayer.lineCap = .round
+        shapeLayer.fillColor = UIColor.clear.cgColor
+        progressBarView.layer.addSublayer(trackLayer)
+        progressBarView.layer.addSublayer(limitLayer)
+        progressBarView.layer.addSublayer(shapeLayer)
+
+    }
 
 }
 
