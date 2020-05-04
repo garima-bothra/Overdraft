@@ -121,7 +121,7 @@
                                         <color key="textColor" white="0.66666666669999997" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1,000.00€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5N2-Yj-mdp">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1,00.00€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5N2-Yj-mdp">
                                         <rect key="frame" x="55" y="98" width="86" height="21"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" name="NotoSansKannada-Regular" family="Noto Sans Kannada" pointSize="17"/>
@@ -160,8 +160,10 @@
                     <tabBarItem key="tabBarItem" title="" image="set" id="ORj-mi-bGs"/>
                     <connections>
                         <outlet property="interestDisplayView" destination="BWO-z4-dfe" id="qUx-Vx-Ub0"/>
+                        <outlet property="interestLabel" destination="xHp-U2-kIx" id="v0T-Hx-0Or"/>
                         <outlet property="labelsView" destination="fI1-fI-qsL" id="pAN-WQ-PHa"/>
                         <outlet property="overdraftAlertTableView" destination="UYU-fe-uJy" id="jfE-qY-lZw"/>
+                        <outlet property="overdraftLabel" destination="5N2-Yj-mdp" id="1Zw-L3-sbC"/>
                         <outlet property="progressBarView" destination="Klz-vY-yWe" id="3m8-xc-7mG"/>
                     </connections>
                 </viewController>

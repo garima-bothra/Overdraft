@@ -18,15 +18,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         let launcedBefore = UserDefaults.standard.bool(forKey: "hasLaunchedBefore")
         if launcedBefore {
-            let unix = UserDefaults.standard.integer(forKey: "firstUnixTime")
-            let overboard = UserDefaults.standard.integer(forKey: "overboardMoney")
-            print("Launched before. Overboard: \(overboard)")
+            UserDefaults.standard.set(100.00, forKey: "overdraftMoney")
             
         }
         else
         {
             UserDefaults.standard.set(true,forKey: "hasLaunchedBefore")
-            UserDefaults.standard.set(100, forKey: "overboardMoney")
+            UserDefaults.standard.set(100.00, forKey: "overdraftMoney")
             print("First time")
         }
         return true
