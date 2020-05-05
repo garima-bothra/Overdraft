@@ -25,7 +25,7 @@ class OverdraftViewController: UIViewController {
         super.viewDidLoad()
         setupNavBar()
         setupProgressBar()
-        setupLabelView()
+   //     setupLabelView()
         updateTimer()
     }
 
@@ -40,22 +40,22 @@ class OverdraftViewController: UIViewController {
         let trackLayer = CAShapeLayer()
         let limitLayer = CAShapeLayer()
         //Find centre to add progress bar
-        var midY = progressBarView.frame.size.width/2 + 10
-        var midX = progressBarView.frame.size.height/2
+        var midX = progressBarView.frame.size.width * 0.52
+        var midY = progressBarView.frame.size.height * 0.52
         var center: CGPoint { return CGPoint(x: midX, y: midY) }
         //Add circular path
-        let circularPath = UIBezierPath(arcCenter: center, radius: midY * 0.8, startAngle: -(5 * CGFloat.pi/4),
+        let circularPath = UIBezierPath(arcCenter: center, radius: midY * 0.75, startAngle: -(5 * CGFloat.pi/4),
                                         endAngle: CGFloat.pi/4, clockwise: true)
         //Set tracklayer to indicate complete = 2000
         trackLayer.path = circularPath.cgPath
         trackLayer.strokeColor = UIColor.lightGray.cgColor
-        trackLayer.lineWidth = 40
+        trackLayer.lineWidth = 38
         trackLayer.lineCap = .round
         trackLayer.fillColor = UIColor.clear.cgColor
         //Set tracklayer to indicate limit = 1000
         limitLayer.path = circularPath.cgPath
         limitLayer.strokeColor = UIColor.white.cgColor
-        limitLayer.lineWidth = 40
+        limitLayer.lineWidth = 38
         limitLayer.strokeEnd = 0.5
         limitLayer.lineCap = .round
         limitLayer.fillColor = UIColor.clear.cgColor
@@ -73,20 +73,20 @@ class OverdraftViewController: UIViewController {
 
     }
     //Setup all labels in the view
-    func setupLabelView() {
-        let lineLayer = CAShapeLayer()
-        let linePath = UIBezierPath()
-        var midY = labelsView.frame.size.width/2
-        var midX = labelsView.frame.size.height/2
-        var center: CGPoint { return CGPoint(x: midX, y: midY) }
-        linePath.move(to: CGPoint(x: center.x - 50, y: center.y))
-        linePath.addLine(to: CGPoint(x: center.x + 50, y: center.y))
-        lineLayer.path = linePath.cgPath
-        lineLayer.lineWidth = 5
-        lineLayer.fillColor = UIColor.darkGray.cgColor
-        labelsView.layer.addSublayer(lineLayer)
-
-    }
+//    func setupLabelView() {
+//        let lineLayer = CAShapeLayer()
+//        let linePath = UIBezierPath()
+//        var midY = labelsView.frame.size.width/2
+//        var midX = labelsView.frame.size.height/2
+//        var center: CGPoint { return CGPoint(x: midX, y: midY) }
+//        linePath.move(to: CGPoint(x: center.x - 50, y: center.y))
+//        linePath.addLine(to: CGPoint(x: center.x + 50, y: center.y))
+//        lineLayer.path = linePath.cgPath
+//        lineLayer.lineWidth = 5
+//        lineLayer.fillColor = UIColor.darkGray.cgColor
+//        labelsView.layer.addSublayer(lineLayer)
+//
+//    }
 
 }
 
